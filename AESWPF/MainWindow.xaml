@@ -1,0 +1,58 @@
+﻿<Window x:Class="AESWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AESWPF"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="173"
+        Width="350"
+        Style="{StaticResource WindowStyle}"
+        MouseDown="Window_MouseDown"
+        AllowsTransparency="True">
+    <Grid>
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="10" Direction="-90" RenderingBias="Quality" ShadowDepth="1"/>
+        </Grid.Effect>
+        
+        <TextBox x:Name="ToEncodeTB"
+                 Style="{StaticResource TBStyle}" 
+                 Margin="50, 29, 50, 110"
+                 local:WStyle.EmptyPrompt="Text to encode"/>
+        
+        <TextBox x:Name="ToDecodeTB"
+                 Style="{StaticResource TBStyle}" 
+                 Margin="50, 80, 50, 60"
+                 Height="30"
+                 local:WStyle.EmptyPrompt="Text to decode"/>
+
+        <Button x:Name="EncodeBTN"
+                Click="EncodeBTN_Click"
+                Content="Encode/Decode"
+                Style="{StaticResource ButtonStyle}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Height="28"
+                Width="100"
+                Margin="198, 130, 50, 11"/>
+        
+        <Button x:Name="ExButton"
+                Content="X"
+                Background="#840303"
+                Style="{StaticResource ButtonStyleEx}"
+                BorderBrush="#7E0000"
+                HorizontalAlignment="Center"
+                Width="20"
+                Height="20"
+                VerticalAlignment="Top"
+                Margin="323, 5, 5, 0"
+                Click="ExButton_Click"/>
+        
+        <TextBox x:Name="KeyTB"
+                 local:WStyle.EmptyPrompt="Key"
+                 Style="{StaticResource TBStyle}"
+                 Height="25"
+                 Margin="50, 130, 162, 11"/>
+    </Grid>
+</Window>

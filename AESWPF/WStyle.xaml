@@ -47,7 +47,8 @@
         <Setter Property="KeyboardNavigation.TabNavigation" Value="None" />
         <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
         <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst" />
-        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Padding" Value="2 2 1 1"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Template">
@@ -66,7 +67,7 @@
                                    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
                                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
                                    Foreground="#9D9D9D"
-                                   FontSize="{TemplateBinding FontSize}"/>
+                                   FontSize="{TemplateBinding FontSize}" FontWeight="SemiBold"/>
 
                         </Grid>
                     </Border>

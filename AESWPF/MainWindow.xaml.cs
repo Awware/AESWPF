@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AESWPF.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,29 +21,12 @@ namespace AESWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private AES aes = new AES();
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        public MainWindow() => InitializeComponent();
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if(e.LeftButton == MouseButtonState.Pressed)
+            if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
-        }
-
-        private void ExButton_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void EncodeBTN_Click(object sender, RoutedEventArgs e)
-        {
-            if (string.IsNullOrEmpty(ToEncodeTB.Text))
-                ToDecodeTB.Text = aes.AESDecryption(ToDecodeTB.Text, KeyTB.Text);
-            else
-                ToEncodeTB.Text = aes.AESEncryption(ToEncodeTB.Text, KeyTB.Text);
         }
     }
 }
